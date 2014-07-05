@@ -1,5 +1,3 @@
-package esyenc;
-
 import java.security.InvalidKeyException;
 import java.security.NoSuchAlgorithmException;
 
@@ -71,8 +69,6 @@ class Control extends JFrame
 									try {
 										String out= conv.Encrypt(Text, key);
 										new EncDialog(out);
-								//	Debug
-										System.out.println(Text+"\n"+out);
 										
 									} catch (InvalidKeyException
 											| NoSuchAlgorithmException
@@ -135,9 +131,7 @@ class Control extends JFrame
 							
 								Text = conv.Decrypt(input.getText(),key);
 								new EncDialog(Text);
-								//Debug
-								System.out.println("\nDecrypting..: "+Text);
-							} catch (InvalidKeyException
+								} catch (InvalidKeyException
 									| NoSuchAlgorithmException
 									| NoSuchPaddingException
 									| IllegalBlockSizeException
@@ -158,7 +152,7 @@ class Control extends JFrame
 
 
 
-		MainArea.setSize(1000,300);
+		MainArea.setSize(600,300);
 		MainArea.setVisible(true);
 
 
