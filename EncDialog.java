@@ -49,6 +49,8 @@ public class EncDialog extends JFrame{
 											String selection = temp;
 											StringSelection data = new StringSelection(selection);
 											clipboard.setContents(data, data);
+											Area.setVisible(false);
+											Area.dispose();
 
 											}
 								}	
