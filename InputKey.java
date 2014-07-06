@@ -27,12 +27,18 @@ public class InputKey extends JFrame{
 					@Override
 					public void actionPerformed(ActionEvent e) {
 						// TODO Auto-generated method stub
+						
 						String temp = in.getText();
-						while(temp.length()%16!=0)
+						if(!(temp=="")&&Control.key!="")
+						{
+							while(!(ispowerof2(temp.length()) && temp.length()>=16))
 							{temp +="\0";}
-						Control.key=temp;
+						
+					
+							Control.key=temp;
+						}
 						part.setVisible(false);
-						part.dispose();
+						part.dispose();						
 					}
 					
 				});
@@ -46,10 +52,16 @@ public class InputKey extends JFrame{
 					@Override
 					public void actionPerformed(ActionEvent e) {
 						// TODO Auto-generated method stub
+						
 						String temp = in.getText();
-						while(temp.length()%16!=0)
+						if(!(temp=="")&&Control.key!="")
+						{
+							while(!(ispowerof2(temp.length()) && temp.length()>=16))
 							{temp +="\0";}
-						Control.key=temp;
+						
+					
+							Control.key=temp;
+						}
 						part.setVisible(false);
 						part.dispose();						
 					}
@@ -60,4 +72,15 @@ public class InputKey extends JFrame{
 		part.setVisible(true);
 		
 	}
+	public static boolean ispowerof2(int i)
+    {
+    if(i==1)
+            return true;
+
+    else if (i%2==0)
+            {return ispowerof2(i/2);}
+    else
+            return false;
+    }
+
 }
