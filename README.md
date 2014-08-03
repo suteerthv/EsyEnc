@@ -1,4 +1,4 @@
-EffinEncryption
+EsyEnc
 ===============
 
 It creats an simple program to Encrypt and decrypt messages
